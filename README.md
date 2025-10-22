@@ -7,7 +7,9 @@ docker version
 ```
 aws --version
 ```
-
+```
+sam --version
+```
 
 
 ### 実行方法
