@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.filter.CognitoIdentityFilter;
 import com.amazonaws.serverless.exceptions.ContainerInitializationException;
 import com.amazonaws.serverless.proxy.internal.testutils.Timer;
 import com.amazonaws.serverless.proxy.model.AwsProxyRequest;
@@ -23,13 +22,7 @@ public class StreamLambdaHandler implements RequestStreamHandler {
     static {
         try {
             handler = SpringBootLambdaContainerHandler.getAwsProxyHandler(App.class);
-
-            // we use the onStartup method of the handler to register our custom filter
-            handler.onStartup(servletContext -> {
-                FilterRegistration.Dynamic registration = servletContext.addFilter("CognitoIdentityFilter", CognitoIdentityFilter.class);
-                registration.addMappingForUrlPatterns(EnumSet.of(DispatcherType.REQUEST), true, "/*");
-            });
-        } catch (ContainerInitializationException e) {
+        } catch (Exception e) {
             // if we fail here. We re-throw the exception to force another cold start
             e.printStackTrace();
             throw new RuntimeException("Could not initialize Spring Boot application", e);
