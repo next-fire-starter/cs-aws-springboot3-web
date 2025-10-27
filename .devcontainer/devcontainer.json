@@ -8,7 +8,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "21.0.9",
-			"jdkDistro": "21.0.9-amzn",
+			"jdkDistro": "amzn",
 			"installMaven": "true",
 			"installGradle": "true"
 		},
