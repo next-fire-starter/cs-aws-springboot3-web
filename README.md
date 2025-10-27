@@ -17,3 +17,5 @@ sam --version
 gradle build
 gradle run
 ```
+
+https://blog.frevo-works.co.jp/entry/2025/01/14/164712
