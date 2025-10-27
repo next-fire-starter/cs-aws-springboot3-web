@@ -8,7 +8,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "21.0.8",
-			"installMaven": "false",
+			"installMaven": "true",
 			"installGradle": "true"
 		},
 		"ghcr.io/devcontainers/features/aws-cli:1": {},
