@@ -21,7 +21,8 @@
 			"extensions": [
 				"vscjava.vscode-java-pack",
 				"vmware.vscode-boot-dev-pack",
-				"PKief.material-icon-theme"
+				"PKief.material-icon-theme",
+				"docsmsft.docs-markdown"
 			]
 		}
 	},
